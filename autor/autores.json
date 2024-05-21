@@ -1,0 +1,30 @@
+{
+    "authors": [
+      {
+        "id": 1,
+        "nationality": "United States",
+        "name": "Reed Hasting",
+        "bio": "American Entrepreneur"
+      },
+      {
+        "id": 2,
+        "nationality": "France",
+        "name": "Antoine de Saint-Exupery",
+        "bio": "Aviator"
+      },
+      {
+        "id": 3,
+        "nationality": "United States",
+        "name": "James Clear",
+        "bio": "Biomechanics"
+      },
+      {
+        "id":4,
+        "nationality": "Germany",
+        "name": "Ana Frank",
+        "bio": "Writer"
+      }
+      
+    ]
+  }
+  

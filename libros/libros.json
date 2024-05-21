@@ -1,0 +1,26 @@
+{
+    "libros": [
+      {
+        "book-id": 1,
+        "titulo": "No rules Rules Netflix and the culture of Reinvention",
+        "autor": "Reed Hasting",
+        "Precio": 25
+        
+      },
+      {
+        "book-id": 2,
+        "titulo": "Habitos atomicos",
+        "autor": "James Clear",
+        "Total Precio": 20
+        
+      },
+      {
+        "book-id": 3,
+        "titulo": "El principito",
+        "autor": "Antoine de Saint-Exupery",
+        "Total Precio": 15
+        
+      }
+      
+    ]
+  }

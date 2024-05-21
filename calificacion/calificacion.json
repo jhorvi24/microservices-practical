@@ -1,0 +1,19 @@
+{
+ "reviews": [
+    {
+      "id": 1,
+      "title": "No rules Rules Netflix and the culture of Reinvention",
+      "rating": 4.6
+    },
+    {
+      "id": 2,
+      "title": "Habitos atomicos",
+      "rating": 4.8
+    },
+    {
+      "id": 3,
+      "title": "El principito",
+      "rating": 4.8
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+
+from flask import Flask, render_template, request, jsonify, redirect
+import json
+import socket
+import requests
+app = Flask(__name__)
+
+
+def get_ip():    
+    hostname = socket.gethostname()
+    ip = socket.gethostbyname(hostname)
+    return hostname, ip
+
+@app.route('/')
+def index():
+    hostname, ip = get_ip()
+    return render_template('index.html', HOSTNAME=hostname, IP=ip)  
+
+@app.route('/autor')
+def autor():
+    url ='http://localhost:5000'   
+    return redirect(url)
+    
+    
+@app.route('/calificacion')
+def calificacion():
+    url ='http://localhost:5001'   
+    return redirect(url)
+
+@app.route('/libros')
+def libros():
+    url ='http://localhost:5002'   
+    return redirect(url)   
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0',debug=True, port=5003)
