@@ -46,6 +46,10 @@ def calificacion():
     url ='http://localhost:5001'   
     return redirect(url)
 
+@app.route('/health')
+def health():
+    return jsonify("OK"),200
+
 
    
 

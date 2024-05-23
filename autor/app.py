@@ -44,5 +44,9 @@ def libros():
     url ='http://localhost:5002'   
     return redirect(url)   
 
+@app.route('/health')
+def health():
+    return jsonify("OK"),200
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0',debug=True)

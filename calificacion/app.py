@@ -46,6 +46,10 @@ def autor():
 def libros():
     url ='http://localhost:5002'   
     return redirect(url)   
+
+@app.route('/health')
+def health():
+    return jsonify("OK"),200
       
     
 
