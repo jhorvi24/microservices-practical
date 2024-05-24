@@ -3,8 +3,13 @@
 from flask import Flask, render_template, request, jsonify, redirect
 import json
 import socket
+import os
+
 app = Flask(__name__)
 
+AUTOR_SERVICE_URL = os.getenv('AUTOR_SERVICE_URL')
+LIBRO_SERVICE_URL = os.getenv('LIBRO_SERVICE_URL')
+CALIFICACION_SERVICE_URL = os.getenv('CALIFICACION_SERVICE_URL')
 
 def get_ip():    
     hostname = socket.gethostname()
@@ -39,13 +44,13 @@ def reviewID(id):
 
 @app.route('/autor')
 def autor():
-    url ='http://localhost:5000'   
+    url = AUTOR_SERVICE_URL  
     return redirect(url)
     
 
 @app.route('/libros')
 def libros():
-    url ='http://localhost:5002'   
+    url = LIBRO_SERVICE_URL
     return redirect(url)   
 
 @app.route('/health')
