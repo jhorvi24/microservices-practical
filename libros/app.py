@@ -11,13 +11,13 @@ def get_ip():
     ip = socket.gethostbyname(hostname)
     return hostname, ip
 
-@app.route('/')
+@app.route('/books')
 def index():
     hostname, ip = get_ip()
     return render_template('index.html', HOSTNAME=hostname, IP=ip)
      
      
-@app.route('/libros', methods=['GET'])
+@app.route('/books/catalog', methods=['GET'])
 def libros():
     #Read the json file
     json_file = open('libros.json')
@@ -25,7 +25,7 @@ def libros():
     return jsonify(data), 200
 
 #Leer el id del archivo json
-@app.route('/libros/<int:id>', methods=['GET'])
+@app.route('/books/catalog/<int:id>', methods=['GET'])
 def reviewID(id):
     with open('libros.json') as json_file:
         data = json.load(json_file)        

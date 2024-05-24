@@ -11,12 +11,13 @@ def get_ip():
     ip = socket.gethostbyname(hostname)
     return hostname, ip
 
-@app.route('/')
+    
+@app.route('/calification')
 def index():
-    hostname, ip = get_ip()
+    hostname, ip = get_ip() 
     return render_template('index.html', HOSTNAME=hostname, IP=ip)
-     
-@app.route('/review', methods=['GET'])
+
+@app.route('/calification/list', methods=['GET'])
 def review():
     #Read the json file
     json_file = open('calificacion.json')
@@ -26,7 +27,7 @@ def review():
 
 
 #Leer el id del archivo json
-@app.route('/review/<int:id>', methods=['GET'])
+@app.route('/calification/list/<int:id>', methods=['GET'])
 def reviewID(id):
     with open('calificacion.json') as json_file:
         data = json.load(json_file)        
